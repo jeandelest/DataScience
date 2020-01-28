@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 from matplotlib.ticker import NullFormatter
 import tensorflow as tf
@@ -29,7 +30,8 @@ images = scaler.fit_transform(images)
 
 im_train, im_test, tar_train, tar_test = train_test_split(images, targets, test_size=0.2, random_state=1)
 
-model = tf.keras.models.Sequential()
+print(im_train[1])
+"""model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Dense(256, activation="relu"))
 model.add(tf.keras.layers.Dense(128, activation="relu"))
 model.add(tf.keras.layers.Dense(10, activation="softmax"))
@@ -40,4 +42,4 @@ model.compile(
     metrics = ["accuracy"]
 )
 
-history = model.fit(im_train, tar_train, epochs=40, validation_split=0.2)
+history = model.fit(im_train, tar_train, epochs=40, validation_split=0.2)"""
